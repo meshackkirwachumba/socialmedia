@@ -19,9 +19,8 @@ function Layout() {
 
 function App() {
   const { theme } = useSelector((state) => state.theme);
-  console.log("theme", theme);
   return (
-    <div className=" data-theme={theme} bg-secondary w-full min-h-[100vh]">
+    <div data-theme={theme} className="bg-secondary w-full min-h-[100vh]">
       <Routes>
         {/* protected routes */}
         <Route element={<Layout />}>
