@@ -4,8 +4,10 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ResetPassword from "./pages/ResetPassword";
+import { useSelector } from "react-redux";
 function Layout() {
-  const user = null;
+  const user = useSelector((state) => state.user);
+  console.log("user", user);
   const location = useLocation();
 
   return user?.token ? (
@@ -16,8 +18,10 @@ function Layout() {
 }
 
 function App() {
+  const { theme } = useSelector((state) => state.theme);
+  console.log("theme", theme);
   return (
-    <div className=" bg-secondary w-full min-h-[100vh]">
+    <div className=" data-theme={theme} bg-secondary w-full min-h-[100vh]">
       <Routes>
         {/* protected routes */}
         <Route element={<Layout />}>

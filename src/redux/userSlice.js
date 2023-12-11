@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  theme: JSON.parse(window?.localStorage.getItem("user")) ?? {},
+  user: JSON.parse(window?.localStorage?.getItem("user")) ?? null,
   edit: false,
 };
 
@@ -22,6 +22,8 @@ const userSlice = createSlice({
     },
   },
 });
+
+export default userSlice.reducer;
 
 // actions
 export function UserLogin(user) {
