@@ -48,7 +48,7 @@ function Home() {
          "
         >
           <ProfileCard user={user} />
-          <FriendsCard />
+          <FriendsCard friends={user?.friends} />
         </div>
 
         {/* MIDDLE */}
