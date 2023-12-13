@@ -40,3 +40,49 @@ export const user = {
   token: "hndflfr74203u47447r28r83",
   profession: "Software Developer",
 };
+
+export const friends = [
+  {
+    _id: "38838373jw2ijw",
+    firstName: "John",
+    lastName: "Bruce",
+    email: "johnbruce@gmailcom",
+    profileUrl: "",
+  },
+  {
+    _id: "38838373jw2ijw",
+    firstName: "James",
+    lastName: "Bond",
+    email: "jamesbond@gmailcom",
+    location: "London",
+    profession: "Software Developer",
+  },
+  {
+    _id: "38838373jw2ijw",
+    firstName: "Jane",
+    lastName: "Blake",
+    email: "janeblake@gmailcom",
+    profileUrl: "",
+  },
+];
+
+export const requests = [
+  {
+    _id: "38838373jw2ijw",
+    requestFrom: friends[0],
+  },
+  {
+    _id: "38838373jw2ijw",
+    requestFrom: friends[1],
+  },
+];
+export const suggest = [
+  {
+    _id: "38838373jw2ijw",
+    ...friends[0],
+  },
+  {
+    _id: "38838373jw2ijw",
+    ...friends[1],
+  },
+];
