@@ -86,3 +86,60 @@ export const suggest = [
     ...friends[1],
   },
 ];
+
+export const posts = [
+  {
+    _id: "38838373jw2ijw",
+    userId: {
+      _id: "38838373jw2ijw",
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@gmailcom",
+      profileUrl: "",
+      location: "Nairobi",
+    },
+    image:
+      "https://cdn.pixabay.com/photo/2023/12/08/23/46/cat-8438334_1280.jpg",
+    likes: [],
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+       unknown printer took a galley of type and scrambled it to make a type specimen book. 
+       It has survived not only five centuries, but also the leap into electronic`,
+  },
+  {
+    _id: "38838373jw2ijw",
+    userId: {
+      _id: "38838373jw2ijw",
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@gmailcom",
+      profileUrl: "",
+      location: "London",
+    },
+    likes: [],
+    image:
+      "https://cdn.pixabay.com/photo/2023/04/21/17/47/plum-blossoms-7942343_640.jpg",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    It has survived not only five centuries, but also the leap into electronic`,
+  },
+  {
+    _id: "38838373jw2ijw",
+    userId: {
+      _id: "38838373jw2ijw",
+      firstName: "John",
+      lastName: "Doe",
+      email: "johndoe@gmailcom",
+      profileUrl: "",
+      location: "Nairobi",
+    },
+    likes: [],
+    image:
+      "https://cdn.pixabay.com/photo/2023/08/23/03/33/boxer-8207572_640.jpg",
+    description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an 
+    unknown printer took a galley of type and scrambled it to make a type specimen book. 
+    It has survived not only five centuries, but also the leap into electronic`,
+  },
+];
