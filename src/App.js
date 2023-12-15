@@ -5,10 +5,11 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ResetPassword from "./pages/ResetPassword";
 import { useSelector } from "react-redux";
+
 function Layout() {
   const user = useSelector((state) => state.user);
 
-  console.log("user", user);
+  
   const location = useLocation();
 
   return user ? (

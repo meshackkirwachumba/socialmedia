@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import TopBar from "../components/TopBar";
 import ProfileCard from "../components/ProfileCard";
 import FriendsCard from "../components/FriendsCard";
-import { suggest, requests } from "../assets/data";
+import { suggest, requests, posts } from "../assets/data";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NoProf from "../assets/NoProfile.jpg";
@@ -12,6 +12,7 @@ import { BiImages, BiSolidVideo } from "react-icons/bi";
 import TextInput from "../components/TextInput";
 import { useForm } from "react-hook-form";
 import Loading from "../components/Loading";
+import PostCard from "../components/PostCard";
 
 function Home() {
   const { user } = useSelector((state) => state.user);
@@ -20,6 +21,7 @@ function Home() {
   const [errMsg, setErrMsg] = useState("");
   const [file, setFile] = useState(null);
   const [posting, setPosting] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -79,7 +81,6 @@ function Home() {
         <div
           className="
            flex-1
-           bg-primary
            h-full
            px-4
            flex
@@ -191,6 +192,24 @@ function Home() {
               </div>
             </div>
           </form>
+
+          {loading ? (
+            <Loading />
+          ) : posts?.length > 0 ? (
+            posts?.map((post) => (
+              <PostCard
+                key={post._id}
+                post={post}
+                user={user}
+                deletePost={() => {}}
+                likePost={() => {}}
+              />
+            ))
+          ) : (
+            <div className="flex w-full h-full items-center justify-center">
+              <p className="text-lg  text-ascent-2">No Post Available</p>
+            </div>
+          )}
         </div>
 
         {/* RIGHT CONTAINER */}
