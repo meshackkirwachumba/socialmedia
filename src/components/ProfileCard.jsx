@@ -38,7 +38,7 @@ function ProfileCard({ user }) {
            flex items-center w-full justify-between border-b pb-5 border-[#66666645]
          "
         >
-          <Link to={`/profile/${user._id}`} className="flex gap-2">
+          <Link to={`/profile/${user?._id}`} className="flex gap-2">
             <img
               className="
                  w-14
@@ -77,7 +77,7 @@ function ProfileCard({ user }) {
           </div>
         </div>
 
-        {/* location & profession */}
+        {/* location & profession div */}
         <div className="flex flex-col w-full gap-2 py-4 border border-[#66666645]">
           <div className="flex gap-2 items-center text-ascent-2">
             <CiLocationOn className="text-xl text-ascent-1" />
